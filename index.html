@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Editor for pc</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="light-mode" class="theme-button" onclick="toggleTheme('light')">
+            <span class="sun-icon">&#9728;</span>
+        </button>
+        <button id="dark-mode" class="theme-button" onclick="toggleTheme('dark')">
+            <span class="moon-icon">&#9790;</span>
+        </button>
+    </div>
+
+    <div class="editor-container">
+        <div class="editor-section">
+            <label for="html-file" class="file-label">Choose HTML File</label>
+            <input type="file" id="html-file" accept=".html">
+            <textarea id="html-code" placeholder="HTML Code"></textarea>
+            
+            <label for="css-file" class="file-label">Choose CSS File</label>
+            <input type="file" id="css-file" accept=".css">
+            <textarea id="css-code" placeholder="CSS Code"></textarea>
+            
+            <label for="js-file" class="file-label">Choose JS File</label>
+            <input type="file" id="js-file" accept=".js">
+            <textarea id="js-code" placeholder="JavaScript Code"></textarea>
+            
+            <button onclick="updatePreview()">Update Preview</button>
+        </div>
+        <div class="resizer"></div>
+        <iframe id="preview" class="preview"></iframe>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
